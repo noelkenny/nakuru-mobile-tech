@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakuru Mobile Tech - Expert Repair & Web Solutions</title>
+
+    <meta name="description" content="Expert laptop repair, web development, and graphic design in Nakuru. Fast, affordable tech support. Call 0716 439 086.">
+<meta name="keywords" content="laptop repair Nakuru, web design Kenya, phone repair, Nakuru Mobile Tech">
+<meta name="author" content="Nakuru Mobile Tech">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/glass.css">
+    
+    <style>
+        /* ===== GLOBAL RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 20px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers H1 and Nav */
+            gap: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* ===== LOGO CONTAINER (MOVED TO LEFT) ===== */
+        .logo-container {
+            text-align: left;      /* Aligns content left */
+            padding: 10px 0;
+            align-self: flex-start; /* Overrides parent center alignment */
+            width: 100%;            /* Ensures it spans the container */
+        }
+
+        .logo-container img {
+            width: 120px;
+            height: auto;
+            display: block;
+            margin: 0;              /* Removed auto margin */
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        nav a:hover, nav a.active {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .hero button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #f8f9ff;
+        }
+
+        #three-container {
+            width: 100%;
+            height: 200px;
+            margin: 20px auto 0;
+            border-radius: 15px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 40px 20px;
+        }
+
+        .services-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== TIMELINE SECTION ===== */
+        .timeline {
+            padding: 40px 20px 60px;
+            text-align: center;
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .timeline-steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .step {
+            background: rgba(255,255,255,0.95);
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            min-width: 140px;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+            background: #667eea;
+            color: white;
+        }
+
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .whatsapp::before {
+            content: "💬";
+            font-size: 1.2rem;
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            background: #128C7E;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 15px 20px;
+                gap: 10px;
+            }
+
+            nav a {
+                text-align: center;
+                padding: 10px 15px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            #three-container {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+            }
+
+            .header-container, .hero-container, .services-container, .timeline-container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo-container img {
+                width: 100px;
+            }
+
+            .hero {
+                padding: 30px 0 20px;
+            }
+
+            .hero button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .whatsapp {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 20px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ===== ANIMATION CLASSES ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>✨ Nakuru Mobile Tech</h1>
+            
+            <!-- Logo Moved to Left -->
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Nakuru Mobile Tech Logo">
+            </div>
+
+            <nav>
+                <a href="index.html" class="active">🏠 Home</a>
+                <a href="services.html">🛠️ Services</a>
+                <a href="portfolio.html">📁 Portfolio</a>
+                <a href="booking.html">📅 Book Repair</a>
+                <a href="contact.html">📞 Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h2 class="fade-in">Tech Support That Comes To You</h2>
+            <p class="fade-in">Professional laptop repair • Custom websites • Graphic design • All in Nakuru</p>
+            <button class="fade-in" onclick="location.href='booking.html'">
+                📅 Book a Repair Now
+            </button>
+            <div id="three-container"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-container">
+            <h2>🛠️ Our Services</h2>
+            <div class="service-grid">
+                <div class="card slide-up">
+                    <h3>💻 Laptop Repair</h3>
+                    <p>Screen, keyboard, motherboard fixes • Battery replacement • Virus removal</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>🧹 Virus Removal</h3>
+                    <p>System cleanup, malware protection & speed optimization</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>🌐 Web Development</h3>
+                    <p>Modern responsive websites • E-commerce • SEO friendly</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>🎨 Graphic Design</h3>
+                    <p>Logos, flyers, business cards & social media branding</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>📱 System tune up</h3>
+                    <p>Performance optimization, software updates & system diagnostics</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>🛡️ Data Recovery</h3>
+                    <p>Accidental deletion, hardware failure & virus damage recovery</p>
+                </div>
+                <div class="card slide-up">
+                    <h3>🔧 Hardware Upgrades</h3>
+                    <p>RAM, SSD, GPU upgrades & custom PC builds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="timeline-container">
+            <h2>📋 How Our Repair Works</h2>
+            <div class="timeline-steps">
+                <div class="step fade-in">1. Contact Us</div>
+                <div class="step fade-in">2. Schedule Visit</div>
+                <div class="step fade-in">3. Free Diagnosis</div>
+                <div class="step fade-in">4. Expert Repair</div>
+                <div class="step fade-in">5. Done! ✨</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="service-grid" style="text-align: center; margin-bottom: 10px; color: #f8f9ff;">
+        <p>📱Free Diagnosis | Affordable Rates | Quality Service</p>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a class="whatsapp"
+       href="https://wa.me/254716439086?text=Hello%20I%20need%20laptop%20repair"
+       target="_blank">
+        Chat on WhatsApp
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script>
+        // GSAP Animations
+        window.addEventListener('load', function() {
+            gsap.to('.hero .fade-in', {
+                duration: 0.8,
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                ease: 'power2.out'
+            });
+            
+            gsap.to('.service-grid .slide-up', {
+                duration: 0.6,
+                y: 0,
+                opacity: 1,
+                stagger: 0.15,
+                ease: 'power2.out',
+                delay: 0.3
+            });
+            
+            gsap.to('.timeline-steps .step', {
+                duration: 0.5,
+                scale: 1,
+                opacity: 1,
+                stagger: 0.1,
+                ease: 'back.out(1.7)',
+                delay: 0.5,
+                from: { scale: 0.9, opacity: 0 }
+            });
+        });
+
+        // Three.js Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('three-container');
+            if (!container || typeof THREE === 'undefined') return;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+            const material = new THREE.MeshPhongMaterial({ 
+                color: 0x667eea,
+                emissive: 0x223355,
+                shininess: 100,
+                transparent: true,
+                opacity: 0.9
+            });
+            const torusKnot = new THREE.Mesh(geometry, material);
+            scene.add(torusKnot);
+
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+            scene.add(ambientLight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(10, 10, 10);
+            scene.add(directionalLight);
+
+            camera.position.z = 40;
+
+            function onResize() {
+                if (!container) return;
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+            window.addEventListener('resize', onResize);
+
+            function animate() {
+                requestAnimationFrame(animate);
+                torusKnot.rotation.x += 0.003;
+                torusKnot.rotation.y += 0.005;
+                torusKnot.position.y = Math.sin(Date.now() * 0.001) * 0.5;
+                renderer.render(scene, camera);
+            }
+            animate();
+        });
+    </script>
+
+    <!-- External Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
+
+    <footer style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); color: white; font-size: 0.9rem;">
+        &copy; 2024 Nakuru Mobile Tech. All rights reserved. Made with ❤️ in Nakuru, by Noel
+    </footer>
+
+</body>
+</html>

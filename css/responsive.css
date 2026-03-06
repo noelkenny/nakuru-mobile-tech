@@ -1,0 +1,235 @@
+/* ============================= */
+/* TABLETS */
+/* ============================= */
+
+@media(max-width:1024px){
+
+.hero{
+
+padding:80px 20px;
+
+}
+
+header{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+nav{
+
+margin-top:10px;
+
+}
+
+.service-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+/* ============================= */
+/* MOBILE DEVICES */
+/* ============================= */
+
+@media(max-width:768px){
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+button{
+
+padding:12px 20px;
+
+}
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline{
+
+padding:30px 15px;
+
+}
+
+.step{
+
+font-size:14px;
+
+}
+
+}
+
+
+
+/* ============================= */
+/* SMALL PHONES */
+/* ============================= */
+
+@media(max-width:480px){
+
+header{
+
+padding:10px;
+
+}
+
+nav a{
+
+display:block;
+
+margin:5px 0;
+
+}
+
+.hero{
+
+padding:60px 15px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero p{
+
+font-size:14px;
+
+}
+
+.card{
+
+padding:15px;
+
+}
+
+}
+
+
+
+/* ============================= */
+/* LARGE SCREENS */
+/* ============================= */
+
+@media(min-width:1400px){
+
+.hero{
+
+padding:150px 100px;
+
+}
+
+.service-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+}
+
+
+
+/* ============================= */
+/* 3D CANVAS RESPONSIVE */
+/* ============================= */
+
+#three-container canvas{
+
+width:100% !important;
+height:400px !important;
+
+}
+
+
+
+/* ============================= */
+/* PORTFOLIO GRID */
+/* ============================= */
+
+.portfolio-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-grid img {
+    width: 60px;           /* Much smaller size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+/* Option 1: Lift effect */
+.portfolio-grid img:hover {
+    transform: translateY(-10px);
+}
+
+/* Option 2: Brightness boost */
+.portfolio-grid img:hover {
+    filter: brightness(1.2);
+}
+
+/* Option 3: Rotate slightly */
+.portfolio-grid img:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+
+/* ============================= */
+/* FORM RESPONSIVE */
+/* ============================= */
+
+form{
+
+max-width:600px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+padding:20px;
+
+}
+
+input, textarea, select{
+
+padding:12px;
+
+border-radius:6px;
+
+border:none;
+
+outline:none;
+
+}

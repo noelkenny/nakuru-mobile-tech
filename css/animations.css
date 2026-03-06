@@ -1,0 +1,201 @@
+/* GLOBAL ANIMATION SETTINGS */
+
+*{
+transition: all 0.3s ease;
+}
+
+/* HERO TEXT FADE IN */
+
+.hero h2{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1s forwards;
+}
+
+.hero p{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1.3s forwards;
+}
+
+.hero button{
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1.6s forwards;
+}
+
+
+/* FADE UP ANIMATION */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* SERVICE CARD HOVER EFFECT */
+
+.card{
+
+transform:translateY(0);
+box-shadow:0 0 0 rgba(0,0,0,0);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 35px rgba(0,255,255,0.3);
+
+}
+
+
+/* GLOW EFFECT */
+
+.card:hover h3{
+
+color:#00ffff;
+text-shadow:0 0 10px cyan;
+
+}
+
+
+/* TIMELINE ANIMATION */
+
+.step{
+
+opacity:0;
+transform:translateX(-50px);
+
+animation:slideIn 1s forwards;
+
+}
+
+.step:nth-child(1){animation-delay:0.3s;}
+.step:nth-child(2){animation-delay:0.6s;}
+.step:nth-child(3){animation-delay:0.9s;}
+.step:nth-child(4){animation-delay:1.2s;}
+.step:nth-child(5){animation-delay:1.5s;}
+
+
+@keyframes slideIn{
+
+0%{
+opacity:0;
+transform:translateX(-40px);
+}
+
+100%{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+
+/* BUTTON GLOW */
+
+button{
+
+position:relative;
+overflow:hidden;
+
+}
+
+button:hover{
+
+background:#00ffff;
+color:black;
+
+box-shadow:0 0 20px cyan;
+
+}
+
+
+/* NAVBAR LINK HOVER */
+
+nav a{
+
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+position:absolute;
+
+left:0;
+bottom:-5px;
+
+width:0%;
+height:2px;
+
+background:#00ffff;
+
+transition:0.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
+
+/* FLOATING HERO ANIMATION */
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+#three-container{
+
+animation:float 6s ease-in-out infinite;
+
+}
+
+
+/* CHATBOT POPUP */
+
+.chatbot{
+
+position:fixed;
+
+bottom:80px;
+right:20px;
+
+background:#1f2833;
+
+padding:15px;
+
+border-radius:10px;
+
+box-shadow:0 0 20px rgba(0,255,255,0.3);
+
+animation:fadeUp 0.5s;
+
+}
